@@ -10,8 +10,8 @@ body {
 
 .dashboard_container{
   @include flexCenter;
-  height: 85%;
-  width: 75%;
+  height: 90%;
+  width: 70%;
   background: $background-color;
   @include borderRadius(2rem);
   overflow: hidden;
