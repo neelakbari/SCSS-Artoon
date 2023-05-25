@@ -1,29 +1,36 @@
-$primary-color:#724be4;
-$dark-primary-color:#1e0059;
-$secondary-color:#f1ecff;
-$background-color:#f2f6fe;
-$body-background-color:#c9ccd6;
+$primary-color: #724be4;
+$dark-primary-color: #1e0059;
+$secondary-color: #f1ecff;
+$background-color: #f2f6fe;
+$body-background-color: #c9ccd6;
+$text-color :
+#a9a8ac;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-@mixin flexCenter($direction : row){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-@mixin flexBetween($direction : row){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: $direction;
-}
-@mixin borderRadius($size : 1rem ){
-    border-radius: $size;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+@mixin flexCenter($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin flexBetween($direction: row) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin borderRadius($size: 1rem) {
+  border-radius: $size;
+}
+
+@mixin boxShadow {
+  -webkit-box-shadow: 7px 9px 18px 0px rgba(189, 182, 189, 0.76);
+  -moz-box-shadow: 7px 9px 18px 0px rgba(189, 182, 189, 0.76);
+  box-shadow: 7px 9px 18px 0px rgba(189, 182, 189, 0.76);
+}
