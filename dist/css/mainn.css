@@ -9,25 +9,21 @@ aside {
   flex: 0 0 10%;
   max-width: 10%;
   background: #1e0059;
-  height: 100%;
-  display: inline-block;
-}
-aside .container {
-  height: 100%;
-  padding: 1.5rem 0;
+  min-height: 100%;
+  padding: 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
-aside .container .circle {
+aside .circle {
   border-radius: 50%;
   height: 20px;
   width: 20px;
   background: linear-gradient(45deg, rgb(29, 41, 253) 3%, rgb(114, 75, 228) 54%, rgb(190, 120, 22) 100%);
   position: relative;
 }
-aside .container .circle::before, aside .container .circle::after {
+aside .circle::before, aside .circle::after {
   content: "";
   position: absolute;
   height: 20px;
@@ -35,33 +31,32 @@ aside .container .circle::before, aside .container .circle::after {
   background: linear-gradient(45deg, rgb(29, 41, 253) 3%, rgb(114, 75, 228) 54%, rgb(190, 120, 22) 100%);
   border-radius: 50%;
 }
-aside .container .circle::after {
+aside .circle::after {
   top: 100%;
   left: 55%;
 }
-aside .container .circle::before {
+aside .circle::before {
   top: 100%;
   left: -55%;
 }
-aside .container nav .icons {
+aside nav .icons {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
-aside .container nav .icons .icon {
+aside nav .icons .icon {
   padding: 0.5rem;
   border-radius: 50%;
 }
-aside .container nav .icons .icon.active {
+aside nav .icons .icon.active {
   background: #724be4;
 }
 
 main {
   flex: 0 0 90%;
   max-width: 90%;
-  height: 100%;
   padding: 1rem;
 }
 main header {
@@ -155,8 +150,6 @@ main #dashboard_section {
 main #dashboard_section .project_section {
   flex: 0 0 79%;
   max-width: 79%;
-  height: 100%;
-  width: 100%;
   background: white;
   border-radius: 1rem;
   padding: 1rem;
@@ -174,8 +167,6 @@ main #dashboard_section .project_section .project_status_container {
   align-items: center;
   flex-direction: row;
   gap: 1rem;
-  width: 100%;
-  height: 25px;
   margin-bottom: 1rem;
 }
 main #dashboard_section .project_section .project_status_container .project_status {
@@ -327,21 +318,18 @@ main #dashboard_section .side_section {
 
 body {
   background: #c9ccd6;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  padding: 2rem;
 }
 
 .dashboard_container {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 90%;
-  width: 70%;
+  flex-flow: row wrap;
+  align-items: stretch;
+  width: 80%;
   background: #f2f6fe;
   border-radius: 2rem;
   overflow: hidden;
@@ -372,3 +360,12 @@ a {
 .btn-primary:hover {
   background: #1e0059;
 }
+
+.btn-purple {
+  color: #724be4;
+  background: #f1ecff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-purple:hover {
+  background: #1e0059;
+}/*# sourceMappingURL=mainn.css.map */
