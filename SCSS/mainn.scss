@@ -1,0 +1,41 @@
+@import "config","aside","header","dashboard";
+
+
+body {
+  background: $body-background-color ;
+  height: 100vh;
+  width: 100vw;
+  @include flexCenter;
+}
+
+.dashboard_container{
+  @include flexCenter;
+  height: 85%;
+  width: 75%;
+  background: $background-color;
+  @include borderRadius(2rem);
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.btn{
+  padding: .5rem .8rem;
+  @include borderRadius(2rem);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary{
+  color: white;
+  background: $primary-color;
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    background: $dark-primary-color;
+  }
+}

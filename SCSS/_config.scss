@@ -1,0 +1,29 @@
+$primary-color:#724be4;
+$dark-primary-color:#1e0059;
+$secondary-color:#f1ecff;
+$background-color:#f2f6fe;
+$body-background-color:#c9ccd6;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@mixin flexCenter($direction : row){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin flexBetween($direction : row){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
+}
+@mixin borderRadius($size : 1rem ){
+    border-radius: $size;
+}
+

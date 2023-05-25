@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--==================== Font Awesome  ====================-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--==================== CSS Link ====================-->
+    <link rel="stylesheet" href="./css/mainn.css" />
+    <title>Demo(SASS)</title>
+  </head>
+  <body>
+    <div class="dashboard_container">
+      <!-- aside section starts  -->
+      <aside>
+        <div class="container">
+          <div class="logo">
+            <div class="circle"></div>
+          </div>
+          <nav>
+            <ul class="icons">
+              <li class="icon active">
+                <a href="#" class="link"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#" class="link"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#" class="link"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#" class="link"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#" class="link"><i class="fas fa-home"></i></a>
+              </li>
+              <li class="icon">
+                <a href="#" class="link"><i class="fas fa-home"></i></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="logo">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- main section starts  -->
+      <main>
+
+        <!-- header starts  -->
+        <header>
+          <div class="search_section">
+            <div class="icon_wrapper">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="input_field">
+              <div class="icon_wrapper">
+                <i class="fas fa-search"></i>
+              </div>
+              <input type="text" placeholder="search" class="search_input" />
+            </div>
+          </div>
+          <div class="profile_section">
+            <div class="icon_wrapper">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="profile_details">
+              <div class="image_wrapper">
+                <img
+                  src="./images/profile1.png"
+                  alt="profile_pic"
+                />
+              </div>
+              <div class="content">
+                <h4>Sullivan</h4>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- header ends  -->
+
+        <!-- Dashboard section starts  -->
+        <section id="dashboard_section">
+            <div class="project_section">
+                <div class="project_title">
+                    <h3>Projects</h3>
+                    <button class="btn btn-primary"> Create Project</button>
+                </div>
+                <div class="project_status_container">
+                    <div class="project_status">
+                        <h3 class="title">
+                            Started
+                        </h3>
+                        <div class="icon_wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project_status">
+                        <h3 class="title">
+                            On Going
+                        </h3>
+                        <div class="icon_wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project_status">
+                        <h3 class="title">
+                            Completed
+                        </h3>
+                        <div class="icon_wrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side_section">
+                <h1>Side Section</h1>
+            </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

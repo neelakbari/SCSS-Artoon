@@ -1,0 +1,72 @@
+main {
+  flex: 0 0 90%;
+  max-width: 90%;
+  height: 100%;
+  padding: 1rem;
+
+  & header {
+    @include flexBetween;
+    padding: 0.5rem;
+    & .search_section {
+      @include flexBetween;
+      gap: 1rem;
+
+      & .fa-bars {
+        margin-right: 0.5rem;
+      }
+      & .input_field {
+        position: relative;
+        & .fa-search {
+          position: absolute;
+          top: 50%;
+          left: 2%;
+          transform: translateY(-50%);
+        }
+        & .search_input {
+          padding: 0.5rem;
+          padding-left: 2rem;
+          @include borderRadius(2rem);
+          outline: none;
+          border: none;
+          min-width: 375px;
+        }
+      }
+    }
+    & .profile_section {
+      @include flexBetween;
+      gap: 1rem;
+
+      & .icon_wrapper {
+        @include flexCenter;
+        gap: 1rem;
+      }
+      & .profile_details {
+        @include flexCenter;
+        gap: .5rem;
+        & .image_wrapper {
+            height: 25px;
+            width: 25px;
+            @include borderRadius(50%);
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        & .content {
+            padding: .5rem 1rem;
+            padding-left: 0;
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}

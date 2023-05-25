@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+aside {
+  flex: 0 0 10%;
+  max-width: 10%;
+  background: #1e0059;
+  height: 100%;
+  display: inline-block;
+}
+aside .container {
+  height: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+aside .container .circle {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(45deg, rgb(29, 41, 253) 3%, rgb(114, 75, 228) 54%, rgb(190, 120, 22) 100%);
+  position: relative;
+}
+aside .container .circle::before, aside .container .circle::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(45deg, rgb(29, 41, 253) 3%, rgb(114, 75, 228) 54%, rgb(190, 120, 22) 100%);
+  border-radius: 50%;
+}
+aside .container .circle::after {
+  top: 100%;
+  left: 55%;
+}
+aside .container .circle::before {
+  top: 100%;
+  left: -55%;
+}
+aside .container nav .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+aside .container nav .icons .icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+aside .container nav .icons .icon.active {
+  background: #724be4;
+}
+
+main {
+  flex: 0 0 90%;
+  max-width: 90%;
+  height: 100%;
+  padding: 1rem;
+}
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5rem;
+}
+main header .search_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+main header .search_section .fa-bars {
+  margin-right: 0.5rem;
+}
+main header .search_section .input_field {
+  position: relative;
+}
+main header .search_section .input_field .fa-search {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
+main header .search_section .input_field .search_input {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  min-width: 375px;
+}
+main header .profile_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+main header .profile_section .icon_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+main header .profile_section .profile_details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+main header .profile_section .profile_details .image_wrapper {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main header .profile_section .profile_details .image_wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+main header .profile_section .profile_details .content {
+  padding: 0.5rem 1rem;
+  padding-left: 0;
+  position: relative;
+}
+main header .profile_section .profile_details .content i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+main #dashboard_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+main #dashboard_section .project_section {
+  flex: 0 0 79%;
+  max-width: 79%;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+main #dashboard_section .project_section .project_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+main #dashboard_section .project_section .project_status_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  height: 25px;
+}
+main #dashboard_section .project_section .project_status_container .project_status {
+  flex: 0 0 32%;
+  max-width: 32%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+main #dashboard_section .project_section .project_status_container .project_status .title {
+  font-weight: normal;
+  font-size: 1rem;
+}
+main #dashboard_section .project_section .project_status_container .project_status .icon_wrapper {
+  height: 25px;
+  width: 25px;
+  background-color: #f2f6fe;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main #dashboard_section .side_section {
+  flex: 0 0 19%;
+  max-width: 19%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 1rem;
+}
+
+body {
+  background: #c9ccd6;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dashboard_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 85%;
+  width: 75%;
+  background: #f2f6fe;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: white;
+  background: #724be4;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #1e0059;
+}

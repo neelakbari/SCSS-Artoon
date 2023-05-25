@@ -1,0 +1,63 @@
+aside {
+  flex: 0 0 10%;
+  max-width: 10%;
+  background: $dark-primary-color;
+  height: 100%;
+  display: inline-block;
+
+  & .container {
+    height: 100%;
+    padding: 1.5rem 0;
+    @include flexBetween(column);
+
+    & .circle {
+      @include borderRadius(50%);
+      height: 20px;
+      width: 20px;
+      background: linear-gradient(
+        45deg,
+        rgba(29, 41, 253, 1) 3%,
+        rgba(114, 75, 228, 1) 54%,
+        rgba(190, 120, 22, 1) 100%
+      );
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: linear-gradient(
+          45deg,
+          rgba(29, 41, 253, 1) 3%,
+          rgba(114, 75, 228, 1) 54%,
+          rgba(190, 120, 22, 1) 100%
+        );
+        @include borderRadius(50%);
+      }
+      &::after {
+        top: 100%;
+        left: 55%;
+      }
+      &::before {
+        top: 100%;
+        left: -55%;
+      }
+    }
+
+    & nav {
+      & .icons {
+        @include flexCenter(column);
+        gap: 1rem;
+        & .icon {
+          padding: 0.5rem;
+          @include borderRadius(50%);
+          &.active {
+            background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
