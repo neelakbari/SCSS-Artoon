@@ -53,6 +53,11 @@ aside nav .icons .icon {
 aside nav .icons .icon.active {
   background: #724be4;
 }
+aside .sign_out_wrapper {
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+}
 
 main {
   flex: 0 0 90%;
@@ -65,6 +70,7 @@ main header {
   align-items: center;
   flex-direction: row;
   padding: 0.5rem;
+  color: #a9a8ac;
 }
 main header .search_section {
   display: flex;
@@ -195,7 +201,6 @@ main #dashboard_section .project_section .projects_wrapper {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
-  transition: all 5s ease-in-out;
 }
 main #dashboard_section .project_section .projects_wrapper .project_container {
   position: relative;
@@ -223,6 +228,9 @@ main #dashboard_section .project_section .projects_wrapper .project_container .p
   align-items: center;
   flex-direction: row;
   width: 100%;
+}
+main #dashboard_section .project_section .projects_wrapper .project_container .project .button_wrapper .btn {
+  font-weight: bold;
 }
 main #dashboard_section .project_section .projects_wrapper .project_container .project .button_wrapper i {
   color: #a9a8ac;
@@ -287,21 +295,6 @@ main #dashboard_section .project_section .projects_wrapper .project_container .p
 main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(5) {
   transform: translateX(75px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(6) {
-  transform: translateX(90px) translateX(-15px);
-}
-main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(7) {
-  transform: translateX(105px) translateX(-15px);
-}
-main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(8) {
-  transform: translateX(120px) translateX(-15px);
-}
-main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(9) {
-  transform: translateX(135px) translateX(-15px);
-}
-main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(10) {
-  transform: translateX(150px) translateX(-15px);
-}
 main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper {
   height: 25px;
   width: 25px;
@@ -348,6 +341,16 @@ main #dashboard_section .side_section .selection_section .title {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+}
+main #dashboard_section .side_section .selection_section .title .content p {
+  color: #a9a8ac;
+  text-transform: uppercase;
+}
+main #dashboard_section .side_section .selection_section .title .logo_wrapper {
+  padding: 0.5rem;
+  background: #e1a364;
+  color: white;
+  border-radius: 50%;
 }
 main #dashboard_section .side_section .selection_section .loader .main_circle {
   height: 170px;
@@ -511,5 +514,36 @@ a {
   transition: all 0.3s ease-in-out;
 }
 .btn-purple:hover {
-  background: #1e0059;
+  background: #724be4;
+  color: white;
+}
+
+.btn-blue {
+  color: #1562ff;
+  background: #ebf2fe;
+  transition: all 0.3s ease-in-out;
+}
+.btn-blue:hover {
+  background: #1562ff;
+  color: white;
+}
+
+.btn-orange {
+  color: #e1a364;
+  background: #f6dabf;
+  transition: all 0.3s ease-in-out;
+}
+.btn-orange:hover {
+  background: #e1a364;
+  color: white;
+}
+
+.btn-pink {
+  color: #e978ec;
+  background: #feedff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-pink:hover {
+  background: #e978ec;
+  color: white;
 }

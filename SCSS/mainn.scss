@@ -45,6 +45,37 @@ a{
   transition: all .3s ease-in-out;
   
   &:hover{
-    background: $dark-primary-color;
+    background: $primary-color;
+    color: white;
+  }
+}
+.btn-blue{
+  color: $blue-dark;
+  background: $blue-light;
+  transition: all .3s ease-in-out;
+  
+  &:hover{
+    background: $blue-dark;
+    color: white;
+  }
+}
+.btn-orange{
+  color: $orange-dark;
+  background: $orange-light;
+  transition: all .3s ease-in-out;
+  
+  &:hover{
+    background: $orange-dark;
+    color: white;
+  }
+}
+.btn-pink{
+  color: $pink-dark;
+  background: $pink-light;
+  transition: all .3s ease-in-out;
+  
+  &:hover{
+    background: $pink-dark;
+    color: white;
   }
 }
