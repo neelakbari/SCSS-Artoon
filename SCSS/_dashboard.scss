@@ -4,8 +4,8 @@ main {
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem;
-      // height: 100%;
-      // width: 100%;
+    // height: 100%;
+    // width: 100%;
 
     & .project_section {
       flex: 0 0 79%;
@@ -54,85 +54,115 @@ main {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 1rem;
+        transition: all 5s ease-in-out;
 
-        & .project {
-          @include boxShadow;
-          @include borderRadius(1rem);
-          @include flexCenter(column);
-          gap: 1.2rem;
-          align-items: flex-start;
-          padding: 0.8rem 0.5rem;
-
-          & .button_wrapper {
-            @include flexBetween;
-            width: 100%;
-
-            & i {
-              color: $text-color;
-            }
+        & .project_container {
+          position: relative;
+          // &::before {
+          //   content: "";
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   bottom: 0;
+          //   right: 0;
+          //   border: 2px dashed $text-color;
+          //   @include borderRadius(1rem);
+          //   visibility: hidden;
+          //   opacity: 0;
+          //   z-index: 0;
+          //   transition: all 1.5s ease-in-out;
+          // }
+          // &:hover::before {
+          //   opacity: 1;
+          //   visibility: visible;
+          // }
+          &:hover .project {
+            z-index: 5;
+            transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-12deg)
+              rotateY(8deg) rotateZ(10deg) translateX(3px) translateY(11px)
+              translateZ(13px) skewX(0deg) skewY(0deg);
           }
-
-          & .project_description {
-            color: $text-color;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
-          }
-
-          & .progress_bar {
+          & .project {
+            @include boxShadow;
+            @include borderRadius(1rem);
+            @include flexCenter(column);
+            gap: 1.2rem;
+            align-items: flex-start;
+            padding: 0.8rem 0.5rem;
+            transition: all 0.5s ease-in-out;
             position: relative;
-            height: 5px;
-            width: 100%;
-            background: $secondary-color;
-            @include borderRadius(8px);
 
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              background: $primary-color;
-              height: 5px;
-              width: 50%;
-              @include borderRadius(8px);
+            & .button_wrapper {
+              @include flexBetween;
+              width: 100%;
+
+              & i {
+                color: $text-color;
+              }
             }
-            & p {
-              position: absolute;
-              right: 0;
-              bottom: 100%;
+
+            & .project_description {
+              color: $text-color;
+              font-size: 0.8rem;
+              margin-bottom: 0.5rem;
             }
-          }
 
-          & .footer {
-            @include flexBetween;
-            width: 100%;
-
-            & .members_wrapper {
-              display: flex;
+            & .progress_bar {
               position: relative;
+              height: 5px;
+              width: 100%;
+              background: $secondary-color;
+              @include borderRadius(8px);
 
-              & :nth-child(1) {
-                position: static !important;
-                transform: translateX(0) !important;
-              }
-              @for $i from 0 through 10 {
-                & .image_wrapper:nth-child(#{$i}) {
-                  transform: translateX($i * 15px) translateX(-15px);
-                }
-              }
-
-              & .image_wrapper {
-                height: 25px;
-                width: 25px;
-                border-radius: 50%;
-                overflow: hidden;
+              &::before {
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
+                background: $primary-color;
+                height: 5px;
+                width: 50%;
+                @include borderRadius(8px);
+              }
+              & p {
+                position: absolute;
+                right: 0;
+                bottom: 100%;
+              }
+            }
 
-                & img {
-                  height: 100%;
-                  width: 100%;
-                  object-fit: cover;
+            & .footer {
+              @include flexBetween;
+              width: 100%;
+
+              & .members_wrapper {
+                display: flex;
+                position: relative;
+
+                & :nth-child(1) {
+                  position: static !important;
+                  transform: translateX(0) !important;
+                }
+                @for $i from 0 through 10 {
+                  & .image_wrapper:nth-child(#{$i}) {
+                    transform: translateX($i * 15px) translateX(-15px);
+                  }
+                }
+
+                & .image_wrapper {
+                  height: 25px;
+                  width: 25px;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+
+                  & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                  }
                 }
               }
             }
@@ -140,13 +170,158 @@ main {
         }
       }
     }
+
+
+    // side section starts 
     & .side_section {
       flex: 0 0 19%;
       max-width: 19%;
-      width: 100%;
-      height: 100%;
-      background: white;
-      @include borderRadius(1rem);
+      min-height: 100%;
+      @include flexBetween(column);
+      gap: 1rem;
+      background: transparent;
+
+      & .selection_section {
+        background: white;
+        padding: 1rem;
+        width: 100%;
+        @include borderRadius(1rem);
+        @include flexCenter(column);
+        gap: 1rem;
+
+        & .title {
+          background: $background-color;
+          @include borderRadius(1rem);
+          padding: 1rem 0.5rem;
+          width: 100%;
+          @include flexBetween();
+        }
+
+        & .loader {
+          & .main_circle {
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+            background: $secondary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            & .inner_circle_1 {
+              width: 80%;
+              height: 80%;
+              background: conic-gradient($primary-color 260deg, white 0deg);
+              // background: white !important;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+              & .inner_circle_2 {
+                width: 93%;
+                height: 93%;
+                background: $secondary-color;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  border-radius: 50%;
+                  width: 80%;
+                  height: 80%;
+                  background: white;
+                }
+              }
+            }
+            & span {
+              z-index: 2;
+            }
+          }
+        }
+
+        & .projects_wrapper {
+          width: 100%;
+          text-align: left;
+
+          & .heading {
+            margin-bottom: 1rem;
+          }
+          & .content_wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0.5rem;
+
+            & .content {
+              padding: 0.5rem;
+              text-align: left;
+              border-radius: 10px;
+              // max-width: 80px;
+              // text-transform: uppercase;
+              &.blue_bg {
+                background-color: $blue-light;
+              }
+              &.orange_bg {
+                background-color: $orange-light;
+              }
+              &.pink_bg {
+                background-color: $pink-light;
+              }
+              &.purple_bg {
+                background-color: $secondary-color;
+              }
+              & .status {
+                color: $text-color;
+                font-size: 0.7rem;
+              }
+              & .number {
+                font-weight: bold;
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+      & .footer_section {
+        background-color: white;
+        padding: 0 1rem;
+        width: 100%;
+        @include borderRadius(1rem);
+        & .content_wrapper {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 1rem 0;
+          &:first-child {
+            border-bottom: 1px solid $text-color;
+          }
+
+          & .icon_wrapper {
+            padding: 1rem;
+            color: white;
+            background: $primary-color;
+            border-radius: 10px;
+          }
+          & .description {
+            & .date {
+              color: $text-color;
+            }
+            & .time {
+              color: black;
+              font-weight: bold;
+            }
+          }
+        }
+      }
     }
   }
 }
