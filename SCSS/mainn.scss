@@ -1,12 +1,11 @@
-@import "config","aside","header","dashboard";
-
+@import "config", "aside", "header", "dashboard";
 
 body {
-  background: $body-background-color ;
+  background: $body-background-color;
   padding: 2rem;
 }
 
-.dashboard_container{
+.dashboard_container {
   margin: 0 auto;
   @include flexCenter;
   flex-flow: row wrap;
@@ -19,62 +18,62 @@ body {
 li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: white;
 }
-.btn{
-  padding: .5rem .8rem;
+.btn {
+  padding: 0.5rem 0.8rem;
   @include borderRadius(2rem);
   outline: none;
   border: none;
   cursor: pointer;
 }
-.btn-primary{
+.btn-primary {
   color: white;
   background: $primary-color;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
-  &:hover{
+  &:hover {
     background: $dark-primary-color;
   }
 }
-.btn-purple{
+.btn-purple {
   color: $primary-color;
   background: $secondary-color;
-  transition: all .3s ease-in-out;
-  
-  &:hover{
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
     background: $primary-color;
     color: white;
   }
 }
-.btn-blue{
+.btn-blue {
   color: $blue-dark;
   background: $blue-light;
-  transition: all .3s ease-in-out;
-  
-  &:hover{
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
     background: $blue-dark;
     color: white;
   }
 }
-.btn-orange{
+.btn-orange {
   color: $orange-dark;
   background: $orange-light;
-  transition: all .3s ease-in-out;
-  
-  &:hover{
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
     background: $orange-dark;
     color: white;
   }
 }
-.btn-pink{
+.btn-pink {
   color: $pink-dark;
   background: $pink-light;
-  transition: all .3s ease-in-out;
-  
-  &:hover{
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
     background: $pink-dark;
     color: white;
   }

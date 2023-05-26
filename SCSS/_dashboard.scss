@@ -90,12 +90,11 @@ main {
             padding: 0.8rem 0.5rem;
             transition: all 0.5s ease-in-out;
             position: relative;
-            
+
             & .button_wrapper {
               @include flexBetween;
               width: 100%;
-              & .btn{
-
+              & .btn {
                 font-weight: bold;
               }
 
@@ -174,8 +173,7 @@ main {
       }
     }
 
-
-    // side section starts 
+    // side section starts
     & .side_section {
       flex: 0 0 19%;
       max-width: 19%;
@@ -192,8 +190,6 @@ main {
         @include flexCenter(column);
         gap: 1rem;
 
-
-
         & .title {
           background: $background-color;
           @include borderRadius(1rem);
@@ -201,13 +197,13 @@ main {
           width: 100%;
           @include flexBetween();
 
-          & .content p{
+          & .content p {
             color: $text-color;
             text-transform: uppercase;
           }
 
-          & .logo_wrapper{
-            padding: .5rem;
+          & .logo_wrapper {
+            padding: 0.5rem;
             background: $orange-dark;
             color: white;
             border-radius: 50%;
@@ -323,8 +319,13 @@ main {
           & .icon_wrapper {
             padding: 1rem;
             color: white;
-            background: $primary-color;
             border-radius: 10px;
+            &.purple_bg {
+              background: $primary-color;
+            }
+            &.blue_bg {
+              background: $blue-dark;
+            }
           }
           & .description {
             & .date {

@@ -452,8 +452,13 @@ main #dashboard_section .side_section .footer_section .content_wrapper:first-chi
 main #dashboard_section .side_section .footer_section .content_wrapper .icon_wrapper {
   padding: 1rem;
   color: white;
-  background: #724be4;
   border-radius: 10px;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper .icon_wrapper.purple_bg {
+  background: #724be4;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper .icon_wrapper.blue_bg {
+  background: #1562ff;
 }
 main #dashboard_section .side_section .footer_section .content_wrapper .description .date {
   color: #a9a8ac;
