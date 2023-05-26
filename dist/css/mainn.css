@@ -195,8 +195,16 @@ main #dashboard_section .project_section .projects_wrapper {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
+  transition: all 5s ease-in-out;
 }
-main #dashboard_section .project_section .projects_wrapper .project {
+main #dashboard_section .project_section .projects_wrapper .project_container {
+  position: relative;
+}
+main #dashboard_section .project_section .projects_wrapper .project_container:hover .project {
+  z-index: 5;
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-12deg) rotateY(8deg) rotateZ(10deg) translateX(3px) translateY(11px) translateZ(13px) skewX(0deg) skewY(0deg);
+}
+main #dashboard_section .project_section .projects_wrapper .project_container .project {
   box-shadow: 7px 9px 18px 0px rgba(189, 182, 189, 0.76);
   border-radius: 1rem;
   display: flex;
@@ -206,30 +214,32 @@ main #dashboard_section .project_section .projects_wrapper .project {
   gap: 1.2rem;
   align-items: flex-start;
   padding: 0.8rem 0.5rem;
+  transition: all 0.5s ease-in-out;
+  position: relative;
 }
-main #dashboard_section .project_section .projects_wrapper .project .button_wrapper {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .button_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   width: 100%;
 }
-main #dashboard_section .project_section .projects_wrapper .project .button_wrapper i {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .button_wrapper i {
   color: #a9a8ac;
 }
-main #dashboard_section .project_section .projects_wrapper .project .project_description {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .project_description {
   color: #a9a8ac;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
-main #dashboard_section .project_section .projects_wrapper .project .progress_bar {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .progress_bar {
   position: relative;
   height: 5px;
   width: 100%;
   background: #f1ecff;
   border-radius: 8px;
 }
-main #dashboard_section .project_section .projects_wrapper .project .progress_bar::before {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .progress_bar::before {
   content: "";
   position: absolute;
   top: 0;
@@ -239,60 +249,60 @@ main #dashboard_section .project_section .projects_wrapper .project .progress_ba
   width: 50%;
   border-radius: 8px;
 }
-main #dashboard_section .project_section .projects_wrapper .project .progress_bar p {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .progress_bar p {
   position: absolute;
   right: 0;
   bottom: 100%;
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   width: 100%;
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper {
   display: flex;
   position: relative;
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper :nth-child(1) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper :nth-child(1) {
   position: static !important;
   transform: translateX(0) !important;
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(0) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(0) {
   transform: translateX(0px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(1) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(1) {
   transform: translateX(15px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(2) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(2) {
   transform: translateX(30px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(3) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(3) {
   transform: translateX(45px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(4) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(4) {
   transform: translateX(60px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(5) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(5) {
   transform: translateX(75px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(6) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(6) {
   transform: translateX(90px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(7) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(7) {
   transform: translateX(105px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(8) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(8) {
   transform: translateX(120px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(9) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(9) {
   transform: translateX(135px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper:nth-child(10) {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper:nth-child(10) {
   transform: translateX(150px) translateX(-15px);
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper {
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -301,7 +311,7 @@ main #dashboard_section .project_section .projects_wrapper .project .footer .mem
   top: 0;
   left: 0;
 }
-main #dashboard_section .project_section .projects_wrapper .project .footer .members_wrapper .image_wrapper img {
+main #dashboard_section .project_section .projects_wrapper .project_container .project .footer .members_wrapper .image_wrapper img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -310,21 +320,24 @@ main #dashboard_section .project_section .projects_wrapper .project .footer .mem
 main #dashboard_section .side_section {
   flex: 0 0 19%;
   max-width: 19%;
+  min-height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
   background: transparent;
 }
 main #dashboard_section .side_section .selection_section {
   background: white;
-  padding: 1rem 0.5rem;
+  padding: 1rem;
   width: 100%;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1rem;
 }
 main #dashboard_section .side_section .selection_section .title {
   background: #f2f6fe;
@@ -332,13 +345,13 @@ main #dashboard_section .side_section .selection_section .title {
   padding: 1rem 0.5rem;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 main #dashboard_section .side_section .selection_section .loader .main_circle {
-  height: 175px;
-  width: 175px;
+  height: 170px;
+  width: 170px;
   border-radius: 50%;
   background: #f1ecff;
   display: flex;
@@ -379,6 +392,72 @@ main #dashboard_section .side_section .selection_section .loader .main_circle .i
 }
 main #dashboard_section .side_section .selection_section .loader .main_circle span {
   z-index: 2;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper {
+  width: 100%;
+  text-align: left;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .heading {
+  margin-bottom: 1rem;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content {
+  padding: 0.5rem;
+  text-align: left;
+  border-radius: 10px;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content.blue_bg {
+  background-color: #ebf2fe;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content.orange_bg {
+  background-color: #f6dabf;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content.pink_bg {
+  background-color: #feedff;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content.purple_bg {
+  background-color: #f1ecff;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content .status {
+  color: #a9a8ac;
+  font-size: 0.7rem;
+}
+main #dashboard_section .side_section .selection_section .projects_wrapper .content_wrapper .content .number {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+main #dashboard_section .side_section .footer_section {
+  background-color: white;
+  padding: 0 1rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper:first-child {
+  border-bottom: 1px solid #a9a8ac;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper .icon_wrapper {
+  padding: 1rem;
+  color: white;
+  background: #724be4;
+  border-radius: 10px;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper .description .date {
+  color: #a9a8ac;
+}
+main #dashboard_section .side_section .footer_section .content_wrapper .description .time {
+  color: black;
+  font-weight: bold;
 }
 
 body {
