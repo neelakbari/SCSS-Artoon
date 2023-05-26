@@ -310,10 +310,65 @@ main #dashboard_section .project_section .projects_wrapper .project .footer .mem
 main #dashboard_section .side_section {
   flex: 0 0 19%;
   max-width: 19%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+}
+main #dashboard_section .side_section .selection_section {
+  background: white;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #dashboard_section .side_section .selection_section .title {
+  background: #f2f6fe;
+  border-radius: 1rem;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+main #dashboard_section .side_section .selection_section .loader .main_circle {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+  background: #f1ecff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle {
   width: 100%;
   height: 100%;
+  background: conic-gradient(#724be4 260deg, #f1ecff 0deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
   background: white;
-  border-radius: 1rem;
+}
+main #dashboard_section .side_section .selection_section .loader .main_circle span {
+  z-index: 2;
 }
 
 body {
@@ -368,4 +423,4 @@ a {
 }
 .btn-purple:hover {
   background: #1e0059;
-}/*# sourceMappingURL=mainn.css.map */
+}
