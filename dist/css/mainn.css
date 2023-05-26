@@ -346,17 +346,27 @@ main #dashboard_section .side_section .selection_section .loader .main_circle {
   align-items: center;
   position: relative;
 }
-main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle {
-  width: 100%;
-  height: 100%;
-  background: conic-gradient(#724be4 260deg, #f1ecff 0deg);
+main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle_1 {
+  width: 80%;
+  height: 80%;
+  background: conic-gradient(#724be4 260deg, white 0deg);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle::before {
+main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle_1 .inner_circle_2 {
+  width: 93%;
+  height: 93%;
+  background: #f1ecff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+main #dashboard_section .side_section .selection_section .loader .main_circle .inner_circle_1 .inner_circle_2::before {
   content: "";
   position: absolute;
   top: 50%;
