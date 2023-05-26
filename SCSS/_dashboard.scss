@@ -54,7 +54,6 @@ main {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 1rem;
-        transition: all 5s ease-in-out;
 
         & .project_container {
           position: relative;
@@ -95,6 +94,9 @@ main {
             & .button_wrapper {
               @include flexBetween;
               width: 100%;
+              & .btn {
+                font-weight: bold;
+              }
 
               & i {
                 color: $text-color;
@@ -143,7 +145,7 @@ main {
                   position: static !important;
                   transform: translateX(0) !important;
                 }
-                @for $i from 0 through 10 {
+                @for $i from 0 through 5 {
                   & .image_wrapper:nth-child(#{$i}) {
                     transform: translateX($i * 15px) translateX(-15px);
                   }
@@ -171,8 +173,7 @@ main {
       }
     }
 
-
-    // side section starts 
+    // side section starts
     & .side_section {
       flex: 0 0 19%;
       max-width: 19%;
@@ -195,6 +196,18 @@ main {
           padding: 1rem 0.5rem;
           width: 100%;
           @include flexBetween();
+
+          & .content p {
+            color: $text-color;
+            text-transform: uppercase;
+          }
+
+          & .logo_wrapper {
+            padding: 0.5rem;
+            background: $orange-dark;
+            color: white;
+            border-radius: 50%;
+          }
         }
 
         & .loader {
@@ -264,8 +277,6 @@ main {
               padding: 0.5rem;
               text-align: left;
               border-radius: 10px;
-              // max-width: 80px;
-              // text-transform: uppercase;
               &.blue_bg {
                 background-color: $blue-light;
               }
@@ -308,8 +319,13 @@ main {
           & .icon_wrapper {
             padding: 1rem;
             color: white;
-            background: $primary-color;
             border-radius: 10px;
+            &.purple_bg {
+              background: $primary-color;
+            }
+            &.blue_bg {
+              background: $blue-dark;
+            }
           }
           & .description {
             & .date {
