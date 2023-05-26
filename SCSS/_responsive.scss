@@ -1,0 +1,96 @@
+@include media-lg {
+  //   main section starts
+  main {
+    #dashboard_section {
+      & .project_section {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      // side section starts
+      & .side_section {
+        display: none;
+      }
+    }
+  }
+}
+@include media-md {
+  //   main section starts
+  main {
+    #dashboard_section {
+      & .project_section {
+        & .projects_wrapper {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+@include media-sm {
+  // header section starts
+  main {
+    & header {
+      & .search_section {
+        & .input_field {
+          & .search_input {
+            min-width: initial;
+          }
+        }
+      }
+    }
+  }
+
+  //   main section starts
+  main {
+    #dashboard_section {
+      & .project_section {
+        & .projects_wrapper {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+}
+@include media-xsm {
+  // aside section starts
+  aside {
+    & .aside_container {
+      position: absolute;
+      top: 0%;
+      left: -100%;
+      bottom: 0;
+      min-height: 100vh;
+      //   min-width: 70px;
+    }
+  }
+
+  //main section starts
+  main {
+    padding-left: 1rem;
+  }
+  //Project Status
+  main {
+    #dashboard_section {
+      & .project_section {
+        & .project_status_container {
+          display: none;
+        }
+      }
+    }
+  }
+  .btn-primary {
+    &.hidden {
+      display: inline-block !important;
+    }
+  }
+}
+@include media-xxsm {
+  main {
+    & header {
+      & .search_section {
+        & .input_field {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 main {
-  flex: 0 0 90%;
-  max-width: 90%;
+  flex: 0 0 100%;
+  max-width: 100%;
   padding: 1rem;
+  padding-left: 90px;
 
   & header {
     @include flexBetween;
