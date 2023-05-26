@@ -585,11 +585,6 @@ main #dashboard_section .side_section .footer_section .content_wrapper .descript
     display: inline-block !important;
   }
 }
-@media screen and (min-width: 250px) {
-  main header .search_section .input_field {
-    display: none;
-  }
-}
 .dashboard_container {
   display: flex;
   justify-content: center;

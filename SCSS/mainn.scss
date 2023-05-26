@@ -1,18 +1,12 @@
-@import "config", "aside", "header", "dashboard";
-
-body {
-  background: $body-background-color;
-  padding: 2rem;
-}
+@import "config", "aside", "header", "dashboard","responsive";
 
 .dashboard_container {
-  margin: 0 auto;
   @include flexCenter;
   flex-flow: row wrap;
   align-items: stretch;
-  width: 80%;
+  width: 100vw;
+  min-height: 100vh;
   background: $background-color;
-  @include borderRadius(2rem);
   overflow: hidden;
 }
 li {
@@ -36,6 +30,9 @@ a {
 
   &:hover {
     background: $dark-primary-color;
+  }
+  &.hidden{
+    display: none;
   }
 }
 .btn-purple {
